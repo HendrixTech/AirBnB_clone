@@ -169,5 +169,5 @@ The recognizable commands by the interpreter are the following:
 
 ## Authors
 
-Ebrudu Hendrix | Email: [hednrixobuks](mailto:hendrixobuks@gmail.com) 
-
+Ebrudu Hendrix | Email: [HendrixEbrudu](mailto:hendrixobuks@gmail.com) 
+Grace Bamidele | Email: [GraceBamidele] (mailto:gbamidele23@gmail.com)
