@@ -72,8 +72,8 @@ class FileStorage:
                 pass
 
     def attributes(self):
-        """Returns the valid attributes and their types for classname"""
-        attributes = {
+        """Returns the valid attr and their types for classname"""
+        attr = {
             "BaseModel":
                 {"id": str,
                  "created_at": datetime.datetime,
@@ -107,4 +107,4 @@ class FileStorage:
                  "user_id": str,
                  "text": str}
         }
-        return attributes
+        return attr
