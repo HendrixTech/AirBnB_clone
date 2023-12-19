@@ -52,28 +52,18 @@ class FileStorage:
 
     def reload(self):
         """Returns a dictionary of valid classes and their references"""
-
-        # from models.base_model import BaseModel
-        # if not os.path.isfile(FileStorage.__file_path):
-        #     return
-        # with open(FileStorage.__file_path, "r", encoding="utf-8") as f:
-        #     obj_dict = json.load(f)
-            # obj_dict = {k: self.classes()[v["__class__"]](**v)
-            #             for k, v in obj_dict.items()}
-            # for obj in obj_dict.values():
-            #    cls_name = obj["__class__"]
-            try:
-                obj_dict = {}
-                with open(FileStorage.__file_path, 'r', encoding="utf-8") as file:
-                    obj_dict = json.load(file)
-                    for key, val in obj_dict.items():
-                        self.all()[key] = self.classes()[val['__class__']](**val)
-            except FileNotFoundError:
-                pass
+        try:
+            obj_dict = {}
+            with open(FileStorage.__file_path, 'r', encoding="utf-8") as file:
+                obj_dict = json.load(file)
+                for key, val in obj_dict.items():
+                    self.all()[key] = self.classes()[val['__class__']](**val)
+        except FileNotFoundError:
+            pass
 
     def attributes(self):
-        """Returns the valid attributes and their types for classname"""
-        attributes = {
+        """Returns the valid attr and their types for classname"""
+        attr = {
             "BaseModel":
                 {"id": str,
                  "created_at": datetime.datetime,
@@ -107,4 +97,4 @@ class FileStorage:
                  "user_id": str,
                  "text": str}
         }
-        return attributes
+        return attr
