@@ -1,0 +1,100 @@
+/* 5-filters.css: for the filters style */
+
+/* Search box */
+div.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    /* text-align: center; */
+}
+
+section.filters {
+    background-color: white;
+    height: 70px;
+    width: 100%;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+}
+
+section.filters button {
+    font-size: 18px;
+    background-color: #ff5a5f;
+    color: #FFFFFF;
+    height: 48px;
+    border-radius: 4px;
+    width: 20%;
+    border: 0;
+    float: right;
+    margin: 11px 30px;
+}
+
+section.filters button:hover {
+    opacity: 90%;
+}
+
+/* location and amenities part of search bar */
+
+.locations,
+.amenities {
+    height: 100%;
+    width: 25%;
+    float: left;
+}
+
+.locations {
+    border-right: 1px solid #DDDDDD;
+}
+
+div.locations h3,
+div.amenities h3 {
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: left;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+
+}
+
+div.amenities h4,
+div.locations h4 {
+    font-weight: 400;
+    font-size: 14px;
+    text-align: left;
+    margin-left: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* display location and amenities options upon hover */
+.popover {
+    display: none;
+    background-color: #FAFAFA;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    position: relative;
+    /* z-index: ; */
+    /* width: 100%; */
+    margin-top: 16px;
+    /* margin-left: -1px; */
+
+}
+.popover h2 {
+    font-size: 16px;
+    /* margin-left: 0px; */
+    margin-top: 20px;
+    margin-bottom: 1px;
+}
+ul {
+    padding-bottom: 20px;
+}
+li {
+    list-style-type: none;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: -25px;
+}
+.locations:hover .popover,
+.amenities:hover .popover {
+    display: grid;
+}
